@@ -52,11 +52,10 @@ class WPBadgeDisplayWidget extends WP_Widget {
 	}
 
 	function widget( $args, $instance ) {
-		extract( $args );
-		$title = apply_filters( 'widget_title', $instance['title'] );
+		$title = apply_filters( 'widget_title', $instance['title'], $instance, $this->is_base );
 
 		if ( ! empty( $title ) ) {
-			echo $before_title . $title . $after_title;
+			echo $args['before_title'] . $title . $args['after_title'];
 		}
 
 		$badgedata = wpbadgedisplay_get_public_backpack_contents( $instance['openbadges_user_id'], null );
