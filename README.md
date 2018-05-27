@@ -2,8 +2,8 @@
 **Contributors:** [davelester](https://profiles.wordpress.org/davelester), [mackensen](https://profiles.wordpress.org/mackensen)  
 **Tags:** Awards,badges,openbadges,widget,wpbadgedisplay  
 **Requires at least:** 3.4.2  
-**Tested up to:** 4.7.5  
-**Stable tag:** 1.0.0  
+**Tested up to:** 4.9.6  
+**Stable tag:** 1.1.0  
 **License:** MPL-2.0  
 **License URI:** https://www.mozilla.org/en-US/MPL/2.0/  
 
@@ -28,6 +28,10 @@ The email, user id, and badge data are not shared with any undisclosed third par
 A user can see the id of any WPBadgeDisplay widgets configured with their email, their Open Badges ID as determined by WPBadgeDisplay, and their Badge data as WPBadgeDisplay sees it, by using the WordPress [Personal Data Exporter](https://developer.wordpress.org/plugins/privacy/adding-the-personal-data-exporter-to-your-plugin/)
 
 ## Changelog ##
+
+### 1.1.0 ###
+* Updated for GDPR compliance
+* Code cleanup
 
 ### 1.0.0 ###
 * Support for multiple widgets per site with different email addresses

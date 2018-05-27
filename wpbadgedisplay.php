@@ -2,7 +2,7 @@
 /**
  *
  * Plugin Name: WPBadgeDisplay
- * Version: 1.0.0
+ * Version: 1.1.0
  * Description: Adds a widget for displaying Open Badges on your blog.
  * Author: Dave Lester
  * Author URI: http://www.davelester.org
@@ -272,11 +272,11 @@ function wpbadgedisplay_exporter( $email_address, $page = 1 ) {
 	$items = array();
 
 	$group_id    = 'widgets';
-	$group_label = __( 'Widgets' );
+	$group_label = __( 'Widgets', 'wpbadgedisplay' );
 
 	if ( ! empty( $widget_ids ) ) {
 		$default = array(
-			'name'  => __( 'WPBadgeDisplay Widgets Using Your Email/ID' ),
+			'name'  => __( 'WPBadgeDisplay Widgets Using Your Email/ID', 'wpbadgedisplay' ),
 			'value' => implode( ', ', $widget_ids ),
 		);
 		$data    = array( $default );
@@ -292,7 +292,7 @@ function wpbadgedisplay_exporter( $email_address, $page = 1 ) {
 	$badge_id = wpbadgedisplay_convert_email_to_openbadges_id( $email_address );
 	if ( ! empty( $badge_id ) ) {
 		$default = array(
-			'name'  => __( 'Your Open Badges Backpack User ID According to WPBadgeDisplay' ),
+			'name'  => __( 'Your Open Badges Backpack User ID According to WPBadgeDisplay', 'wpbadgedisplay' ),
 			'value' => wpbadgedisplay_convert_email_to_openbadges_id( $email_address ),
 		);
 		$data    = array( $default );
@@ -308,7 +308,7 @@ function wpbadgedisplay_exporter( $email_address, $page = 1 ) {
 	$badge_data = wpbadgedisplay_get_public_backpack_contents( wpbadgedisplay_convert_email_to_openbadges_id( $email_address ) );
 	if ( ! empty( $badge_data ) ) {
 		$default = array(
-			'name'  => __( 'Badge Data Imported by WPBadgeDisplay' ),
+			'name'  => __( 'Badge Data Imported by WPBadgeDisplay', 'wpbadgedisplay' ),
 			'value' => print_r( $badge_data, true ),
 		);
 		$data    = array( $default );
@@ -330,7 +330,7 @@ function wpbadgedisplay_exporter( $email_address, $page = 1 ) {
 
 function register_wpbadgedisplay_eraser() {
 	$erasers['wpbadgedisplay'] = array(
-		'eraser_friendly_name' => __( 'WPBadgeDisplay Plugin' ),
+		'eraser_friendly_name' => __( 'WPBadgeDisplay Plugin', 'wpbadgedisplay' ),
 		'callback'             => 'wpbadgedisplay_eraser',
 	);
 	return $erasers;
@@ -338,7 +338,7 @@ function register_wpbadgedisplay_eraser() {
 
 function register_wpbadgedisplay_exporter( $exporters ) {
 	$exporters['wpbadgedisplay'] = array(
-		'exporter_friendly_name' => __( 'WPBadgeDisplay Plugin' ),
+		'exporter_friendly_name' => __( 'WPBadgeDisplay Plugin', 'wpbadgedisplay' ),
 		'callback'               => 'wpbadgedisplay_exporter',
 	);
 	return $exporters;
