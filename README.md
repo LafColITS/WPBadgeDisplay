@@ -2,7 +2,7 @@
 **Contributors:** [davelester](https://profiles.wordpress.org/davelester), [mackensen](https://profiles.wordpress.org/mackensen)  
 **Tags:** Awards,badges,openbadges,widget,wpbadgedisplay  
 **Requires at least:** 3.4.2  
-**Tested up to:** 4.9.6  
+**Tested up to:** 5.0  
 **Stable tag:** 1.1.0  
 **License:** MPL-2.0  
 **License URI:** https://www.mozilla.org/en-US/MPL/2.0/  
